@@ -2,36 +2,36 @@
 #include <string.h>
 int input(char a[])
 {
-	if(!strcmp(a,"Áã")) return 0;
-	else if(!strcmp(a,"Ò»")) return 1;
-	else if(!strcmp(a,"¶ş")) return 2;
-	else if(!strcmp(a,"Èı")) return 3;
-	else if(!strcmp(a,"ËÄ")) return 4;
-	else if(!strcmp(a,"Îå")) return 5;
-	else if(!strcmp(a,"Áù")) return 6;  
-    else if(!strcmp(a,"Æß")) return 7; 
-	else if(!strcmp(a,"°Ë")) return 8; 
-	else if(!strcmp(a,"¾Å")) return 9; 
-	else if(!strcmp(a,"Ê®")) return 10;
+	if(!strcmp(a,"é›¶")) return 0;
+	else if(!strcmp(a,"ä¸€")) return 1;
+	else if(!strcmp(a,"äºŒ")) return 2;
+	else if(!strcmp(a,"ä¸‰")) return 3;
+	else if(!strcmp(a,"å››")) return 4;
+	else if(!strcmp(a,"äº”")) return 5;
+	else if(!strcmp(a,"å…­")) return 6;  
+    else if(!strcmp(a,"ä¸ƒ")) return 7; 
+	else if(!strcmp(a,"å…«")) return 8; 
+	else if(!strcmp(a,"ä¹")) return 9; 
+	else if(!strcmp(a,"å")) return 10;
 }
 void output_1(int sum)
 {
-	if(sum>0)
+	if(sum>=0)
 	{
-		if(sum==0) printf("Áã");
-		else if(sum==1) printf("Ò»");
-		else if(sum==2) printf("¶ş");
-		else if(sum==3) printf("Èı");
-		else if(sum==4) printf("ËÄ");
-		else if(sum==5) printf("Îå");
-		else if(sum==6) printf("Áù");
-		else if(sum==7) printf("Æß");
-		else if(sum==8) printf("°Ë");
-		else if(sum==9) printf("¾Å");
-		else if(sum==10) printf("Ê®");        
+		if(sum==0) printf("é›¶");
+		else if(sum==1) printf("ä¸€");
+		else if(sum==2) printf("äºŒ");
+		else if(sum==3) printf("ä¸‰");
+		else if(sum==4) printf("å››");
+		else if(sum==5) printf("äº”");
+		else if(sum==6) printf("å…­");
+		else if(sum==7) printf("ä¸ƒ");
+		else if(sum==8) printf("å…«");
+		else if(sum==9) printf("ä¹");
+		else if(sum==10) printf("å");        
 	}
 	else if(sum<0)
-		printf("over-expenditure£¡"); 
+		printf("over-expenditureï¼"); 
 }
 void output_2(int sum)
 {
@@ -42,7 +42,7 @@ void output_2(int sum)
 		b=sum/10;
 		if(b!=1)
 		  output_1(b);
-	    printf("Ê®");
+	    printf("å");
 		if(a!=0)
 		  output_1(a);	  
 	}
@@ -54,24 +54,24 @@ int main()
 	char zs[5],qb[100],dy[100],num[5],q[5];
 	int sum;
 	scanf("%s %s %s %s",zs,qb,dy,num);
-	if(strcmp(zs,"ÕûÊı")==0&&strcmp(qb,"Ç®°ü")==0&&strcmp(dy,"µÈÓÚ")==0)
+	if(strcmp(zs,"æ•´æ•°")==0&&strcmp(qb,"é’±åŒ…")==0&&strcmp(dy,"ç­‰äº")==0)
 	{
 		sum=input(num);
 		while(1)
 		{
 			scanf("%s",qb);
-			if(strcmp(qb,"Ç®°ü"))
+			if(strcmp(qb,"é’±åŒ…"))
 			 break;
 			scanf("%s %s",dy,num);
-			if(!strcmp(dy,"Ôö¼Ó"))
+			if(!strcmp(dy,"å¢åŠ "))
 		    	sum+=input(num);
-			else if(!strcmp(dy,"¼õÉÙ"))
+			else if(!strcmp(dy,"å‡å°‘"))
 				sum-=input(num);
 			else
 				printf("error!");
 		} 
 		scanf("%s",q);
-		if(strcmp(qb,"¿´¿´")==0&&strcmp(q,"Ç®°ü")==0)
+		if(strcmp(qb,"çœ‹çœ‹")==0&&strcmp(q,"é’±åŒ…")==0)
 		{
 			if(sum<=10)
 			 output_1(sum);
